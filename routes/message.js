@@ -3,7 +3,7 @@ var models = require("../models");
 exports.send = function(req, res) {
 	var body = req.body;
 	var date = new Date();
-	var dateCreated = date.getDate() + " " + date.getMonth() + " " + date.getFullYear();
+	var dateCreated = date.getDay() + " " + date.getMonth() + " " + date.getYear();
 	var MessageSchema = new models.Message({
 		"email": body.email,
 		"content": body.content,
